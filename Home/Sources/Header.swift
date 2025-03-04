@@ -1,13 +1,13 @@
 //
-//  HomeHeader.swift
+//  Header.swift
+//  Home
 //
-//  Created by Shinren Pan on 2024/3/19.
-//
+//  Created by Joe Pan on 2025/3/5.
 //
 
 import UIKit
 
-final class HomeHeader: UIView {
+final class Header: UIView {
     static let height = 280.0
     private let imgView = UIImageView(image: .init(named: "banner"))
     
@@ -21,13 +21,13 @@ final class HomeHeader: UIView {
     }
 }
 
-// MARK: - Public
+// MARK: - Internal
 
-extension HomeHeader {
+internal extension Header {
     func reloadUI(offsetY: CGFloat) {
         if offsetY < 0 {
             var transform = CATransform3DTranslate(CATransform3DIdentity, 0, offsetY, 0)
-            let scaleFactor = 1 + (-1 * offsetY / (HomeHeader.height / 2))
+            let scaleFactor = 1 + (-1 * offsetY / (Header.height / 2))
             transform = CATransform3DScale(transform, scaleFactor, scaleFactor, 1)
             imgView.layer.transform = transform
         }
@@ -39,15 +39,11 @@ extension HomeHeader {
 
 // MARK: - Private
 
-private extension HomeHeader {
-    // MARK: Setup Something
-    
+private extension Header {
     private func setupSelf() {
         backgroundColor = .white
         clipsToBounds = true
     }
-    
-    // MARK: - Add Something
     
     func addViews() {
         imgView.translatesAutoresizingMaskIntoConstraints = false

@@ -10,12 +10,7 @@
 		0E0155A72BA97C5900044FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155A62BA97C5900044FB7 /* AppDelegate.swift */; };
 		0E0155A92BA97C5A00044FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0155A82BA97C5A00044FB7 /* Assets.xcassets */; };
 		0E0155AC2BA97C5A00044FB7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0E0155AB2BA97C5A00044FB7 /* Base */; };
-		0E0155B72BA97C7A00044FB7 /* HomeVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155B22BA97C7A00044FB7 /* HomeVO.swift */; };
-		0E0155B82BA97C7A00044FB7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155B32BA97C7A00044FB7 /* HomeRouter.swift */; };
-		0E0155B92BA97C7A00044FB7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155B42BA97C7A00044FB7 /* HomeVM.swift */; };
-		0E0155BA2BA97C7A00044FB7 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155B52BA97C7A00044FB7 /* HomeModels.swift */; };
-		0E0155BB2BA97C7A00044FB7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155B62BA97C7A00044FB7 /* HomeVC.swift */; };
-		0E0155BF2BA9813000044FB7 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0155BE2BA9813000044FB7 /* HomeHeader.swift */; };
+		D897BEE72D77777C0094B196 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = D897BEE62D77777C0094B196 /* Home */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +18,7 @@
 		0E0155A62BA97C5900044FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E0155A82BA97C5A00044FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0155AB2BA97C5A00044FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0E0155B22BA97C7A00044FB7 /* HomeVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVO.swift; sourceTree = "<group>"; };
-		0E0155B32BA97C7A00044FB7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		0E0155B42BA97C7A00044FB7 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
-		0E0155B52BA97C7A00044FB7 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
-		0E0155B62BA97C7A00044FB7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		0E0155BE2BA9813000044FB7 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		D897BEE42D7775130094B196 /* Home */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Home; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D897BEE72D77777C0094B196 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +36,9 @@
 		0E01559A2BA97C5900044FB7 = {
 			isa = PBXGroup;
 			children = (
+				D897BEE42D7775130094B196 /* Home */,
 				0E0155A52BA97C5900044FB7 /* Sources */,
+				D897BEE52D77777C0094B196 /* Frameworks */,
 				0E0155A42BA97C5900044FB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +54,6 @@
 		0E0155A52BA97C5900044FB7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0E0155BC2BA97CD000044FB7 /* Home */,
 				0E0155A62BA97C5900044FB7 /* AppDelegate.swift */,
 				0E0155A82BA97C5A00044FB7 /* Assets.xcassets */,
 				0E0155AA2BA97C5A00044FB7 /* LaunchScreen.storyboard */,
@@ -69,25 +61,11 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		0E0155BC2BA97CD000044FB7 /* Home */ = {
+		D897BEE52D77777C0094B196 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0E0155BD2BA9812400044FB7 /* Views */,
-				0E0155B52BA97C7A00044FB7 /* HomeModels.swift */,
-				0E0155B32BA97C7A00044FB7 /* HomeRouter.swift */,
-				0E0155B62BA97C7A00044FB7 /* HomeVC.swift */,
-				0E0155B42BA97C7A00044FB7 /* HomeVM.swift */,
-				0E0155B22BA97C7A00044FB7 /* HomeVO.swift */,
 			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		0E0155BD2BA9812400044FB7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0E0155BE2BA9813000044FB7 /* HomeHeader.swift */,
-			);
-			path = Views;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,12 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E0155B72BA97C7A00044FB7 /* HomeVO.swift in Sources */,
-				0E0155B82BA97C7A00044FB7 /* HomeRouter.swift in Sources */,
-				0E0155B92BA97C7A00044FB7 /* HomeVM.swift in Sources */,
-				0E0155BA2BA97C7A00044FB7 /* HomeModels.swift in Sources */,
-				0E0155BF2BA9813000044FB7 /* HomeHeader.swift in Sources */,
-				0E0155BB2BA97C7A00044FB7 /* HomeVC.swift in Sources */,
 				0E0155A72BA97C5900044FB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +286,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,6 +311,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +347,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D897BEE62D77777C0094B196 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E01559B2BA97C5900044FB7 /* Project object */;
 }

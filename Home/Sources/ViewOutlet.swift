@@ -1,26 +1,33 @@
 //
-//  HomeVO.swift
+//  ViewOutlet.swift
+//  Home
 //
-//  Created by Shinren Pan on 2024/3/19.
+//  Created by Joe Pan on 2025/3/5.
 //
 
 import UIKit
 
-final class HomeVO {
+@MainActor final class ViewOutlet {
     private(set) lazy var mainView = makeMainView()
     private(set) lazy var list = makeList()
-    let header = HomeHeader()
+    private let header = Header()
     
     init() {
         addViews()
     }
 }
 
+// MARK: - Internal
+
+internal extension ViewOutlet {
+    func reloadHeader(offsetY: CGFloat) {
+        header.reloadUI(offsetY: offsetY)
+    }
+}
+
 // MARK: - Private
 
-private extension HomeVO {
-    // MARK: Add Something
-    
+private extension ViewOutlet {
     private func addViews() {
         mainView.addSubview(list)
         NSLayoutConstraint.activate([
@@ -30,11 +37,9 @@ private extension HomeVO {
             list.bottomAnchor.constraint(equalTo: mainView.bottomAnchor),
         ])
         
-        header.frame = .init(x: 0, y: 0, width: 1000, height: HomeHeader.height)
+        header.frame = .init(x: 0, y: 0, width: 1000, height: Header.height)
         list.tableHeaderView = header
     }
-    
-    // MARK: - Make Something
     
     private func makeMainView() -> UIView {
         let result = UIView(frame: .zero)

@@ -1,19 +1,20 @@
 //
-//  HomeVC.swift
+//  ViewController.swift
+//  Home
 //
-//  Created by Shinren Pan on 2024/3/19.
+//  Created by Joe Pan on 2025/3/5.
 //
 
 import Combine
 import UIKit
 
-final class HomeVC: UIViewController {
-    private let vo = HomeVO()
-    private let vm = HomeVM()
-    private let router = HomeRouter()
+public final class ViewController: UIViewController {
+    private let vo = ViewOutlet()
+    private let vm = ViewModel()
+    private let router = Router()
     private var binding: Set<AnyCancellable> = .init()
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setupSelf()
         setupBinding()
@@ -23,9 +24,7 @@ final class HomeVC: UIViewController {
 
 // MARK: - Private
 
-private extension HomeVC {
-    // MARK: Setup Something
-
+private extension ViewController {
     func setupSelf() {
         navigationItem.title = "Home"
         view.backgroundColor = vo.mainView.backgroundColor
@@ -57,20 +56,18 @@ private extension HomeVC {
         vo.list.delegate = self
     }
     
-    // MARK: - Handle State
-
     func stateNone() {}
 }
 
 // MARK: - UITableViewDataSource
 
-extension HomeVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        vm.model.items.count
+extension ViewController: UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        vm.items.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = vm.model.items[indexPath.row]
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = vm.items[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") {
             cell.textLabel?.text = item.name
@@ -87,19 +84,19 @@ extension HomeVC: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension HomeVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension ViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 // MARK: - UIScrollViewDelegate
 
-extension HomeVC: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+extension ViewController: UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView != vo.list { return }
         
         let offsetY = scrollView.contentOffset.y
-        vo.header.reloadUI(offsetY: offsetY)
+        vo.reloadHeader(offsetY: offsetY)
     }
 }
